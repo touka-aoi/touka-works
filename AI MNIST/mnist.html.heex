@@ -1,0 +1,115 @@
+<div class = "my-20 text-center" >
+  <p class = "text-2xl text-align font-bold text-violet-800 bg-neutral-100 py-2 inline-block px-28 py-2 rounded-xl">
+    MNIST
+  </p>
+  <p class = "mt-4">
+    結構あほです
+  </p>
+</div>
+
+<p id = "js-predict" class = " mb-10 text-center text-2xl font-bold text-violet-80"> 予測 </p>
+<canvas id = "js-result" class="mx-auto border-solid border-2 bg-neutral-100" width="28" height="28">
+</canvas>
+
+<div class = "flex justify-center" >
+<div class = "" >
+  <p class = "m-2 font-bold text-violet-800 ml-">数字を書いてね！</p>
+  <div id = "canvas" phx-hook="MNIST">
+    <canvas id = "js-paint" class=" border-solid border-2 " width="300" height="300" phx-update="ignore">
+    </canvas>
+  </div>
+  <div class = "flex">
+    <div class = "m-2">
+        <button class = "js-reset py-1 px-4 text-sm font-bold  bg-amber-400 rounded" >リセットする</button>
+    </div>
+    <div class = "m-2">
+        <button class = "py-1 px-4 text-sm font-bold  bg-amber-400 rounded" phx-click="predict">予測する！</button>
+    </div>
+  </div>
+</div>
+<div class = "ml-60 flex flex-col bg-neutral-100 p-3">
+  <p class = "m-2 font-bold text-violet-800 ml-">確率</p>
+  <div class = "flex flex-col" >
+    <div id="predictBg-0"  class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p  class = "m-1 font-bold text-violet-800 ">
+        0
+      </p>
+      <p id="predict-0" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div  id="predictBg-1" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        1
+      </p>
+      <p id="predict-1" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div  id="predictBg-2" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        2
+      </p>
+      <p id="predict-2" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div  id="predictBg-3" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        3
+      </p>
+      <p id="predict-3" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div id="predictBg-4" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        4
+      </p>
+      <p id="predict-4" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div  id="predictBg-5" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        5
+      </p>
+      <p id="predict-5" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div  id="predictBg-6" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        6
+      </p>
+      <p id="predict-6" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div id="predictBg-7"  class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        7
+      </p>
+      <p id="predict-7" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div id="predictBg-8" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        8
+      </p>
+      <p id="predict-8" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+    <div id="predictBg-9" class = "flex px-2 mt-1 w-52 bg-zinc-50 justify-between overflow-hidden">
+      <p class = "m-1 font-bold text-violet-800 ">
+        9
+      </p>
+      <p id="predict-9" class = "m-1 font-bold text-violet-800 "> 
+        -確率表示-
+      </p>
+    </div>
+  </div>
+</div>
+</div>
