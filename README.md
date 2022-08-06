@@ -1,4 +1,5 @@
-1. AI MNIST JS
-ブラウザ上でMNIST 
+### 1. AI MNIST JS
 
-ツール : phoenix/elixir, tensorflow.js 
+ ブラウザ上でMNIST 
+ 
+ ツール : phoenix/elixir, tensorflow.js 
