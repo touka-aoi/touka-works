@@ -1,0 +1,49 @@
+<div class = "mt-20 mb-17 text-center" >
+  <p class = "text-2xl text-align font-bold text-violet-800 bg-neutral-100 py-2 inline-block px-28 py-2 rounded-xl">
+    くるみちゃんジェネレータ
+  </p>
+  <p class = "mt-4">
+    :D
+  </p>
+</div>
+
+<canvas class="mx-auto my-12 border-solid border-2 bg-neutral-100" width="640"  height="360"> </canvas>
+
+<div id = "id" phx-hook="KURUMI">
+
+<section  phx-drop-target={@uploads.avatar.ref}>
+  <form
+      id="upload-form"
+      phx-submit="genelu"
+      phx-change="validate"
+  >
+      <%= live_file_input @uploads.avatar,  class: "hidden" %>
+
+      <%= if  @uploads.avatar.entries != [] do  %>
+        <%= for entry <- @uploads.avatar.entries do %>
+          <div class = "flex justify-center mb-5">
+            <button type="submit" class = "js-reset mx-3 py-1 px-4 text-base font-bold  bg-amber-400 rounded" >じぇねる</button>
+            <button type="button" phx-click = "cancelu" phx-value-ref={entry.ref} aria-label="cancel" class = "js-reset mx-3 py-1 px-4 text-base font-bold  bg-amber-400 rounded" >きゃんせる</button>
+          </div>
+          <div class = "select-none text-center">
+            おとがなりません
+          </div>
+        <% end %>
+      <% else %>
+        <%= if @hide != "show" do %>
+         <div class = "flex justify-center mb-5">
+            <button type="button" phx-click = "replay" class = "js-reset mx-3 py-1 px-4 text-base font-bold  bg-amber-400 rounded" >もういっかい</button>
+            <button type="button" phx-click = "back-top" class = "js-reset mx-3 py-1 px-4 text-base font-bold  bg-amber-400 rounded" >もどる</button>
+          </div>
+        <% else %>
+          <div class= "flex justify-center flex-col m-auto max-w-xl h-32 border-2 border-dashed rounded hover:border-gray-400 transition">
+            <p class = "select-none text-center text-xs" > ファイルをドラッグアンドドロップ </p>
+            <p class = "select-none text-center text-xs" > .jpg .jpeg .png </p>
+          </div>
+        <% end %>
+
+      <% end %>
+  </form>
+</section>
+
+</div>
