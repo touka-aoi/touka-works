@@ -1,0 +1,13 @@
+[Unit]
+Description=this Service is sending raspberry pi's sensor data to mysite.
+After=network.target
+
+[Service]
+ExecStart=/home/toukaaoi/dev_sensor/main.py
+Environment=PYTHONUNBUFFERED=1
+Restart=no
+Type=simple
+
+
+[Install]
+WantedBy = multi-user.target
